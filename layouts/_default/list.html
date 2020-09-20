@@ -10,21 +10,25 @@
   <header><h1>{{ .Title | default "Articles" | humanize }}</h1></header>
 
   <div>
-    {{ range $Pages.GroupByDate "2006" }}
+  {{ range $Pages.GroupByDate "2006" }}
     <h2>{{ .Key }}</h2>
 
     <ul class="archive">
-      <!--  range $Pages  -->
-      {{ range .Pages }}
+    <!--  range $Pages  -->
+    <!-- .Pages in $Pages -->
+    {{ range .Pages }}
       <li>
-        {{ if .Date }}
-          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
-        {{ end }}
+      {{ if .Date }}
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
+      {{ end }}
         <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <!--  range .Params.categories 
+          [<a href="/categories/{{ lower . }}/" style="color:#0000EE; padding-left: auto;"><strong>{{ . }}</strong></a>]
+         end  -->
       </li>
       {{ end }}
     </ul>
-    {{ end }}
+  {{ end }}
   </div>
   
   {{ .Content }}
