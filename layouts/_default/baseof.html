@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
-<title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+<title>{{ if .IsHome }} {{ "Home" }} | {{ else }} {{ .Title }} | {{ end }} {{ .Site.Title }}</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {{ hugo.Generator }}
@@ -22,6 +22,7 @@
 <body>
 
 <header class="icons">
+<!-- the menu header -->
   {{ if not (gt (len .Site.Menus) 1) }}
     <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
   {{ end }}
