@@ -2,14 +2,23 @@
 
 <article id="article">
   <header>
-    {{ range $index, $tag := .Params.categories }}
-      {{- if gt $index 0 }}, {{ end -}}
-      <a href="{{ ($.Site.GetPage (printf "/%s/%s" "categories" $tag)).Permalink }}">{{ $tag | upper }}</a>
-    {{- end -}}
+  {{ range $index, $tag := .Params.categories }}
+    {{- if gt $index 0 }}, {{ end -}}
+    <a href="{{ ($.Site.GetPage (printf "/%s/%s" "categories" $tag)).Permalink }}">{{ $tag | upper }}</a>
+  {{- end -}}
     <h1>{{ .Title }}</h1>
-    {{ if .Date }}<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 02, 2006" }}</time>{{ end }}
+  {{ if .Date }}<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 02, 2006" }}</time>{{ end }}
   </header>
   {{ .Content }}
+
+  <div>
+    <li>
+    {{ range $index, $tag := .Params.tags }}
+      {{- if gt $index 0 }} | {{ end -}}
+        <a href="{{ ($.Site.GetPage (printf "/%s/%s" "tags" $tag)).Permalink }}">{{ $tag | upper }}</a>
+    {{- end -}}
+    </li>
+  </div>
 
   {{ partial "related.html" . }}
   

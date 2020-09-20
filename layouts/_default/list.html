@@ -7,7 +7,15 @@
 {{ end }}
 
 <article>
-  <header><h1>{{ .Title | default "Articles" | humanize }}</h1></header>
+  <header>
+    <h1>
+    {{ if .IsHome }}
+      Articles
+    {{ else }}
+      {{ .Title }}
+    {{ end }}
+    </h1>
+  </header>
 
   <div>
   {{ range $Pages.GroupByDate "2006" }}
