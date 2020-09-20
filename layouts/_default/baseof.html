@@ -5,7 +5,11 @@
 <body>
   {{ partial "header.html" . }}
 
-  {{- block "main" . }}{{- end }}  
+  {{- block "main" . }}{{- end }}
+
+  {{ if not .IsHome }}
+  {{ partial "comments.html" . }}
+  {{ end }}
 </body>
 {{ partial "foot.html" . }}
 

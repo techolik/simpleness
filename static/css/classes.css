@@ -29,11 +29,11 @@
   text-decoration: inherit;
 }
 
-.icons svg {
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-  transition: .2s color;
-  vertical-align: middle;
-  margin-bottom: .15em;
+/* custom */
+.fontawesome a.hover {
+  text-decoration: none;
+}
+
+.post-meta {
+  color: #8e8e91;
 }
