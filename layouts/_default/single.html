@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<article>
+<article id="article">
   <header>
     {{ range $index, $tag := .Params.categories }}
       {{- if gt $index 0 }}, {{ end -}}
