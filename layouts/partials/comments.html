@@ -22,10 +22,10 @@
   <div class="commemt-item" >
     <div class="valine" >
       <!-- visitor count -->
-      {{ if and (not .Site.Params.valine.enableHeaderVisitor) (ne .Site.BaseURL "http://localhost:1313/") }}
+      {{ if and (not .Site.Params.valine.enableHeaderVisitor) (or (ne .Site.BaseURL "http://localhost:1313/") .Site.Params.valine.debug) }}
         <span id="{{ .URL | relURL }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">
           {{ T "valinePV"}}
-          <span class="leancloud-visitors-count">0</span>
+          <span class="leancloud-visitors-count">0</span> Views
           <p></p>
         </span>
       {{ end }}

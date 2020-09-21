@@ -10,7 +10,7 @@
   <header>
     <h1>
     {{ if .IsHome }}
-      Articles
+      <!-- Articles -->
     {{ else }}
       {{ .Title }}
     {{ end }}
@@ -32,9 +32,9 @@
         <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
       {{ end }}
         <a href="{{ .Permalink }}">{{ .Title }}</a>
-        <!--  range .Params.categories 
-          [<a href="/categories/{{ lower . }}/" style="color:#0000EE; padding-left: auto;"><strong>{{ . }}</strong></a>]
-         end  -->
+         <!-- range .Params.categories 
+          [<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" padding-left: auto;><strong>{{ . }}</strong></a>]
+         end   -->
       </li>
       {{ end }}
     </ul>
@@ -42,7 +42,7 @@
   {{ end }}
   </div>
   
-  {{ .Content }}
+  <!-- .Content  -->
 </article>
 
 {{ end }}
