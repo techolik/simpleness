@@ -30,10 +30,15 @@
 }
 
 /* custom */
-.fontawesome a.hover {
+.fontawesome a {
+  /* color: #0000EE; */
   text-decoration: none;
 }
 
 .post-meta {
   color: #8e8e91;
+}
+
+.foot {
+  text-align: center;
 }
