@@ -15,7 +15,9 @@
     {{ if .Date }}
     <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 02, 2006" }}</time> &nbsp; 
     {{ end }}
+
     {{ .Params.author }} &nbsp;
+
     <!-- Valine Vistors Start -->
      <!-- if and .Site.Params.valine.visitor (ne .Site.BaseURL "http://localhost:1313/")  -->
       <i class="far fa-eye"></i>
@@ -24,17 +26,17 @@
       </span> &nbsp;
      <!-- end  -->
     <!-- Valine Vistors End -->
+
     {{ if .Site.Params.enableReadingTime }}
       <i class="far fa-clock"></i>
       {{ $readTime := mul (div (countwords .Content) 220.0) 60 }}
-
       {{ $minutes := math.Floor (div $readTime 60) }}
       {{ $seconds := mod $readTime 60 }}
 
       {{ if gt $minutes 0}}
         {{ $minutes }} {{ cond (eq $minutes 1) "minute" "min" }}
       {{ end }}
-      {{ $seconds }} {{ cond (eq $seconds 1) "second" "s" }}.
+      {{ $seconds }} {{ cond (eq $seconds 1) "second" "s" }}
       &nbsp;
     {{ end }}
     </div>
