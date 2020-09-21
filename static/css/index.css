@@ -60,7 +60,8 @@ a:hover {
 }
 
 article a {
-  color: #68f;
+  /* color: #68f; */
+  color: #0000EE;
 }
 
 header time {
@@ -160,6 +161,11 @@ nav {
 
 nav a {
   margin: .5em .8em;
+}
+
+footer hr {
+  width: 45%;
+  border-style: dashed;
 }
 
 body > header, body > article, body > footer {
