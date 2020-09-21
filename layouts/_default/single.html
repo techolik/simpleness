@@ -19,12 +19,13 @@
     {{ .Params.author }} &nbsp;
 
     <!-- Valine Vistors Start -->
-     <!-- if and .Site.Params.valine.visitor (ne .Site.BaseURL "http://localhost:1313/")  -->
+    {{ if .Site.Params.valine.enableHeaderVisitor }}
+     <!-- if and .Site.Params.valine.enableHeaderVisitor (ne .Site.BaseURL "http://localhost:1313/")  -->
       <i class="far fa-eye"></i>
       <span id="{{ .Permalink | relURL }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">
           <span class="leancloud-visitors-count"> {{ T "valinePV" }} </span>
       </span> &nbsp;
-     <!-- end  -->
+    {{ end }}
     <!-- Valine Vistors End -->
 
     {{ if .Site.Params.enableReadingTime }}
