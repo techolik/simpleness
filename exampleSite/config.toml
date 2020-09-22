@@ -8,7 +8,7 @@ enableEmoji = true
 title = "Rainer Chiang"
 subtitle = "little words"
 author = "Rainer Chiang"
-copyright = "[Rainer Chiang](/) &#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness)"
+copyright = "[Rainer Chiang](/) &#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)"
 
 theme = "simpleness"
 googleAnalytics = ""
