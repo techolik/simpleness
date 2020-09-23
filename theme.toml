@@ -1,6 +1,6 @@
 name = "Simpleness"
 license = "public domain"
-licenselink = "https://github.com/niklasbuschmann/contrast-hugo/blob/master/LICENSE.txt"
+licenselink = "https://github.com/RainerChiang/simpleness/blob/master/LICENSE"
 description = "Concise Hugo theme"
 homepage = "https://github.com/RainerChiang/simpleness"
 tags = ["blog"]
