@@ -2,6 +2,7 @@
 
 {{ $Pages := .Pages }}
 
+{{ $home := .IsHome }}
 {{ if .IsHome }}
   {{ $Pages = where site.RegularPages "Type" "in" .Site.Params.mainSections }}
 {{ end }}
@@ -21,10 +22,9 @@
   {{ range $Pages.GroupByDate "2006" }}
     <h2>{{ .Key }}</h2>
     {{ range .Pages.GroupByDate "January"}}
-      <h3>{{ .Key }}</h3>
+    {{ if $home }}<h3>{{ .Key }}</h3>{{ end }}
 
     <ul class="archive">
-    <!--  range $Pages  -->
     <!-- .Pages in $Pages -->
     {{ range .Pages }}
       <li>
@@ -33,8 +33,8 @@
       {{ end }}
         <a href="{{ .Permalink }}">{{ .Title }}</a>
          <!-- range .Params.categories 
-          [<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" padding-left: auto;><strong>{{ . }}</strong></a>]
-         end   -->
+          >> <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" padding-left: auto;><strong>{{ . }}</strong></a>
+         end  -->
       </li>
       {{ end }}
     </ul>

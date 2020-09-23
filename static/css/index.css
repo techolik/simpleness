@@ -164,7 +164,7 @@ nav a {
   margin: .5em .8em;
 }
 
-footer hr {
+footer hr { /* custom */
   width: 45%;
   border-style: dashed;
 }
