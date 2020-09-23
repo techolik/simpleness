@@ -1,6 +1,6 @@
 <div class="comments">
 {{ if and .Site.Params.disqus .Params.enableDisqus }}
-  <div class="disqus">
+  <div class="comments-item">
     <div id="disqus_thread"></div>
     <script>
       window.addEventListener("load", () => {
@@ -21,9 +21,7 @@
 {{ end }}
 
 {{ if .Site.Params.valine.enable }}
-  <div class="valine" >
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <div class="comments-item" >
     <!-- visitor count -->
     {{ if and (not .Site.Params.valine.enableHeaderVisitor) (or (ne .Site.BaseURL "http://localhost:1313/") .Site.Params.valine.debug) }}
       <span id="{{ .URL | relURL }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">
@@ -32,8 +30,10 @@
         <p></p>
       </span>
     {{ end }}
-    {{ if not .Params.enableDisqus }}
+    
     <div id="vcomments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <script type="text/javascript">
       new Valine({
           el: '#vcomments',
@@ -48,7 +48,6 @@
           recordIP: true
       });
     </script>
-    {{ end }}
   </div>
 {{ end }}
 </div>

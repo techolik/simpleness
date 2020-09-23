@@ -1,12 +1,16 @@
-name = "Contrast"
+name = "Simpleness"
 license = "public domain"
 licenselink = "https://github.com/niklasbuschmann/contrast-hugo/blob/master/LICENSE.txt"
-description = "Minimalistic Hugo theme"
-homepage = "https://github.com/niklasbuschmann/contrast-hugo"
+description = "Concise Hugo theme"
+homepage = "https://github.com/RainerChiang/simpleness"
 tags = ["blog"]
 features = ["blog"]
-min_version = "0.41"
+min_version = "0.51"
 
 [author]
+  name = "RainerChiang"
+  homepage = "https://github.com/RainerChiang"
+
+[original.author]
   name = "Niklas Buschmann"
   homepage = "https://github.com/niklasbuschmann/"
