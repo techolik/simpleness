@@ -13,5 +13,5 @@ git add .
 git commit -m "Blog update at $(date)"
 echo "Done: git commit, Blog update at $(date) \n"
 
-git push -u origin master
-echo "\nDone: git push -u origin master"
+git push -u origin main
+echo "\nDone: git push -u origin main"
