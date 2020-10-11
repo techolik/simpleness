@@ -37,12 +37,15 @@ Heading 1 Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et 
     </item>
     
     <item>
-      <title>Image</title>
+      <title>Short Codes</title>
       <link>https://rainerchiang.github.io/simpleness/posts/post-6/</link>
       <pubDate>Fri, 06 Sep 2019 12:13:36 +0530</pubDate>
       
       <guid>https://rainerchiang.github.io/simpleness/posts/post-6/</guid>
-      <description>Images   Dave Herring     Dave Herring   </description>
+      <description>Hugo ships with several Built-in Shortcodes for rich content, along with a Privacy Config and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.
+Images   Dave Herring     Dave Herring    Instagram Simple Shortcode &amp;lt; instagram_simple BGvuInzyFAe hidecaption &amp;gt;
+ YouTube Privacy Enhanced Shortcode &amp;lt; youtube ZJthWmvUzzc &amp;gt;
+ Twitter Simple Shortcode &amp;lt; twitter_simple 1085870671291310081 &amp;gt;</description>
     </item>
     
     <item>
@@ -56,37 +59,36 @@ I was a little surprised, because though I’ve gotten that comment before, it�
     </item>
     
     <item>
-      <title>How I Learned to Stop Procrastinating, &amp; Love Letting Go</title>
+      <title>Math Type Setting</title>
       <link>https://rainerchiang.github.io/simpleness/posts/post-3/</link>
       <pubDate>Sun, 18 Mar 2018 12:13:32 +0530</pubDate>
       
       <guid>https://rainerchiang.github.io/simpleness/posts/post-3/</guid>
-      <description>The end of procrastination is the art of letting go.
-I’ve been a lifelong procrastinator, at least until recent years. I would put things off until deadline, because I knew I could come through. I came through on tests after cramming last minute, I turned articles in at the deadline after waiting until the last hour, I got things done.
-Until I didn’t. It turns out procrastinating caused me to miss deadlines, over and over.</description>
+      <description>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.
+In this example we will be using KaTeX
+ Create a partial under /layouts/partials/math.html Within this partial reference the Auto-render Extension or host these scripts locally. Include the partial in your templates like so:  {{ if or .Params.math .Site.Params.math }} {{ partial &amp;#34;math.html&amp;#34; . }} {{ end }}  To enable KaTex globally set the parameter math to true in a project&amp;rsquo;s configuration To enable KaTex on a per page basis include the parameter math: true in content files  Note: Use the online reference of Supported TeX Functions</description>
     </item>
     
     <item>
-      <title>Fearlessness: How to Stop Running from Space</title>
+      <title>Markdown Syntax Guide</title>
       <link>https://rainerchiang.github.io/simpleness/posts/post-2/</link>
       <pubDate>Thu, 18 May 2017 12:13:30 +0530</pubDate>
       
       <guid>https://rainerchiang.github.io/simpleness/posts/post-2/</guid>
-      <description>We spend our days filling in every available space, cramming in more tasks, responding to messages, checking social media and online sites, watching videos.
-We are afraid of empty space in our lives.
-The result is often a continual busyness, constant distraction and avoidance, lack of focus, lack of satisfaction with our lives.
-We run from silence. We run from the spaces between tasks and appointments. We run from solitude and stillness.</description>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Primer: When You Have Too Much to Do</title>
+      <title>Emoji Support</title>
       <link>https://rainerchiang.github.io/simpleness/posts/post-1/</link>
       <pubDate>Wed, 18 Jan 2017 02:01:58 +0530</pubDate>
       
       <guid>https://rainerchiang.github.io/simpleness/posts/post-1/</guid>
-      <description>You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems, managing finances and personal health habits and so much more.
-It all keeps piling up, and it can feel overwhelming.
-How do you keep up with it all? How do you find focus and peace and get stuff accomplished when you have too much on your plate?</description>
+      <description>Emoji can be enabled in a Hugo project in a number of ways.
+The emojify function can be called directly in templates or Inline Shortcodes.
+To enable emoji globally, set enableEmoji to true in your site&amp;rsquo;s configuration and then you can type emoji shorthand codes directly in content files; e.g.
+The Emoji cheat sheet is a useful reference for emoji shorthand codes.
+ N.B. The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform.</description>
     </item>
     
   </channel>

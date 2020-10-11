@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Hugo 0.75.1" />
 
-  <title> How I Learned to Stop Procrastinating, &amp; Love Letting Go |  Rainer Chiang</title>
+  <title> Math Type Setting |  Rainer Chiang</title>
   <meta name="description" content="The art of letting go.">
   <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/index.css">
   <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/classes.css">
@@ -14,6 +14,22 @@
   
   
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link 
+    rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" 
+    integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" 
+    crossorigin="anonymous">
+  </link>
+  <script 
+    defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" 
+    integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" 
+    crossorigin="anonymous">
+  </script>
+  <script 
+    defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" 
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" 
+    crossorigin="anonymous" 
+    onload="renderMathInElement(document.body);">
+  </script>
 </head>
 
 <body>
@@ -44,7 +60,7 @@
   </nav>
   
   
-  <div class="hidden description">There are Rainer's words.</div>
+  <div class="hidden description">A simple and concise hugo theme.</div>
   
 </header>
 
@@ -53,12 +69,12 @@
   
     <i class="fas fa-folder"></i>
     
-    <a href="/simpleness/categories/text">Text</a>
+    <a href="/simpleness/categories/hugo">Hugo</a>
     &nbsp;
     
   
 
-    <h1 style="text-align: center;" >How I Learned to Stop Procrastinating, &amp; Love Letting Go</h1>
+    <h1 style="text-align: center;" >Math Type Setting</h1>
     <div class="post-meta">
     
       <time datetime="2018-03-18T12:13:32&#43;05:30">March 18, 2018</time> &nbsp; 
@@ -77,32 +93,40 @@
       
 
       
-        2 min
-      
-      24 s
+      36 s
       &nbsp;
     
     </div>
   </header>
 
-  <p>The end of procrastination is the art of letting go.</p>
-<p>I’ve been a lifelong procrastinator, at least until recent years. I would put things off until deadline, because I knew I could come through. I came through on tests after cramming last minute, I turned articles in at the deadline after waiting until the last hour, I got things done.</p>
-<p>Until I didn’t. It turns out procrastinating caused me to miss deadlines, over and over. It stressed me out. My work was less-than-desirable when I did it last minute. Slowly, I started to realize that procrastination wasn’t doing me any favors. In fact, it was causing me a lot of grief.</p>
-<p>But I couldn’t quit. I tried a lot of things. I tried time boxing and goal setting and accountability and the Pomodoro Technique and Getting Things Done. All are great methods, but they only last so long. Nothing really worked over the long term.</p>
-<p>That’s because I wasn’t getting to the root problem.</p>
-<p>I hadn’t figured out the skill that would save me from the procrastination.</p>
-<p>Until I learned about letting go.</p>
-<p>Letting go first came to me when I was quitting smoking. I had to let go of the “need” to smoke, the use of my crutch of cigarettes to deal with stress and problems.</p>
-<p>Then I learned I needed to let go of other false needs that were causing me problems: sugar, junk food, meat, shopping, beer, possessions. I’m not saying I can never do these things again once I let go of these needs, but I let go of the idea that they’re really necessary. I let go of an unhealthy attachment to them.</p>
-<p>Then I learned that distractions and the false need to check my email and news and other things online … were causing me problems. They were causing my procrastination.</p>
-<p>So I learned to let go of those too.</p>
-<p>Here’s the process I used to let go of the distractions and false needs that cause procrastination:</p>
-<p>I paid attention to the pain they cause me, later, instead of only the temporary comfort/pleasure they gave me right away.
-I thought about the person I want to be, the life I want to live. I set my intentions to do the good work I think I should do.
-I watched my urges to check things, to go to the comfort of distractions. I saw that I wanted to escape discomfort of something hard, and go to the comfort of something familiar and easy.
-I realized I didn’t need that comfort. I could be in discomfort and nothing bad would happen. In fact, the best things happen when I’m in discomfort.
-And then I smile, and breathe, and let go.</p>
-<p>And one step at a time, become the person I want to be.</p>
+  <p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
+<p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
+<ul>
+<li>Create a partial under <code>/layouts/partials/math.html</code></li>
+<li>Within this partial reference the <a href="https://katex.org/docs/autorender.html">Auto-render Extension</a> or host these scripts locally.</li>
+<li>Include the partial in your templates like so:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{{</span> <span style="color:#66d9ef">if</span> or .Params.math .Site.Params.math <span style="color:#f92672">}}</span>
+<span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;math.html&#34;</span> . <span style="color:#f92672">}}</span>
+<span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
+</code></pre></div><ul>
+<li>To enable KaTex globally set the parameter <code>math</code> to <code>true</code> in a project&rsquo;s configuration</li>
+<li>To enable KaTex on a per page basis include the parameter <code>math: true</code> in content files</li>
+</ul>
+<p><strong>Note:</strong> Use the online reference of <a href="https://katex.org/docs/supported.html">Supported TeX Functions</a></p>
+
+
+
+<h3 id="examples">Examples</h3>
+
+<p>
+Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
+</p>
+
+<p>Block math:
+$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$</p>
 
 
   
@@ -118,7 +142,10 @@ And then I smile, and breathe, and let go.</p>
     
       <i class="fas fa-tags"></i>
       
-        <a href="/simpleness/tags/procrastinating">Procrastinating</a>
+        <a href="/simpleness/tags/mathjax">MathJax</a>
+        &nbsp;
+      
+        <a href="/simpleness/tags/test">test</a>
         &nbsp;
       
     
@@ -127,6 +154,19 @@ And then I smile, and breathe, and let go.</p>
   
 
   
+
+<div class="releated-post">
+  <h3>Related Posts</h3>
+  
+  <i class="fas fa-paperclip"></i>
+  <a href="/simpleness/posts/post-2/">Markdown Syntax Guide</a>
+  <br>
+  
+  <i class="fas fa-paperclip"></i>
+  <a href="/simpleness/posts/post-1/">Emoji Support</a>
+  <br>
+  
+</div>
 
 
   <div class="comments">
