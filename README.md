@@ -1,3 +1,5 @@
+![Demo](/images/screenshot.png)
+
 [Demo](https://rainerchiang.github.io/simpleness/)
 
 ## hugo theme simpleness
