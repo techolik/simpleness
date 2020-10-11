@@ -5,8 +5,6 @@ lastmod:
 author: "Rainer Chiang"
 
 description: ""
-categories: [""]
-tags: [""]
 
 
 draft: false
