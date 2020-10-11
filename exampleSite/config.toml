@@ -6,7 +6,6 @@ enableEmoji = true
 # pagination = 10
 
 title = "Rainer Chiang"
-subtitle = "little words"
 author = "Rainer Chiang"
 copyright = "[Rainer Chiang](/) &#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)"
 
@@ -20,8 +19,7 @@ googleAnalytics = ""
   favicon = "favicon.ico"
   startyear = "2019"
   description = "There are Rainer's words."
-  subtitle = "little words"
-  # disqus = "rainerchiang"
+  disqus = "rainerchiang"
 
 [params.valine]
   enable = true
@@ -29,7 +27,7 @@ googleAnalytics = ""
   appId = ''
   appKey = ''
   placeholder = 'Say Something......'
-  requiredFields = ['nick','mail']
+  requiredFields = ['nick']
   avatar = 'robohash'
   visitor = true
   enableHeaderVisitor = true

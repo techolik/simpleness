@@ -10,7 +10,7 @@ tags: [""]
 
 
 draft: false
-comment : true
+enableDisqus : false
 enableMathJax: false
 disableToC: false
 disableAutoCollapse: true

@@ -93,9 +93,13 @@ img, li {
 }
 
 img {
-  border-radius: 2px;
+  border-radius: 5px;
   max-width: 100%;
   height: auto;
+  /* center horizontally */
+  margin-left: auto; 
+  margin-right: auto;
+  display: block;
 }
 
 table {
