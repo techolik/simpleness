@@ -2,7 +2,7 @@
 
 <article id="article">
   <header>
-  {{ if gt .Params.categories 0 }}
+  {{ if gt (len .Params.categories) 0 }}
     <i class="fas fa-folder"></i>
     {{ range .Params.categories }}
     <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
@@ -54,7 +54,7 @@
     <p></p>
     {{ end }}
     <div class="post-tags">
-    {{ if gt .Params.tags 0 }}
+    {{ if gt (len .Params.tags) 0 }}
       <i class="fas fa-tags"></i>
       {{ range .Params.tags }}
         <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>

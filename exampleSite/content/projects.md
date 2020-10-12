@@ -1,11 +1,12 @@
 ---
-title: "Projects"
+title: Projects
 date: 2020-09-22T10:37:58+05:30
 lastmod: 
-author: "Rainer Chiang"
+author: Rainer Chiang
 
-description: ""
-
+description: 
+categories: []
+tags: []
 
 draft: false
 comment : true
@@ -14,8 +15,8 @@ disableToC: false
 disableAutoCollapse: true
 ---
 
-# Projects
+## Projects
 
-## [Simpleness](https://github.com/RainerChiang/mySimpleness)
+### [simpleness](https://github.com/RainerChiang/simpleness)
 
 A hugo theme ported form [contrast-hugo](https://github.com/niklasbuschmann/contrast-hugo)
