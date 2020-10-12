@@ -9,14 +9,12 @@ categories: []
 tags: []
 
 draft: false
-comment : true
+enableDisqus : true
 enableMathJax: false
 disableToC: false
 disableAutoCollapse: true
 ---
 
-## Projects
-
-### [simpleness](https://github.com/RainerChiang/simpleness)
+## [simpleness](https://github.com/RainerChiang/simpleness)
 
 A hugo theme ported form [contrast-hugo](https://github.com/niklasbuschmann/contrast-hugo)

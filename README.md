@@ -53,3 +53,6 @@ hugo server
 
 then, open http://localhost:1313/ in your browser。
 
+### 4. configuration example
+
+[config.toml](https://github.com/RainerChiang/upload-theme/blob/main/config.toml)

@@ -9,7 +9,7 @@ categories: []
 tags: []
 
 draft: false
-comment : true
+enableDisqus : true
 enableMathJax: false
 disableToC: false
 disableAutoCollapse: true
