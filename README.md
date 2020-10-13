@@ -1,10 +1,10 @@
-[Demo](https://rainerchiang.github.io/simpleness/)
+![Demo](https://raw.githubusercontent.com/RainerChiang/simpleness/master/images/screenshot.png)
 
 ## hugo theme simpleness
 
 simpleness is a concise theme for hugo which is forked from [contrast-hugo](https://github.com/niklasbuschmann/contrast-hugo).
 
-![Demo](/images/screenshot.png)
+[Demo](https://rainerchiang.github.io/simpleness/)
 
 ### Features
 
