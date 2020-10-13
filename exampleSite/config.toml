@@ -22,12 +22,12 @@ googleAnalytics = ""
   disqus = ""
 
 [params.valine]
-  enable = true
+  enable = false
   lang = 'en' # zh-CN
   appId = ''
   appKey = ''
   placeholder = 'Say Something......'
-  requiredFields = ['nick']
+  requiredFields = ['nick', 'mail']
   avatar = 'robohash'
   visitor = true
   enableHeaderVisitor = true
@@ -39,22 +39,17 @@ googleAnalytics = ""
   url = "/"
   weight = 1
   [[menu.main]]
-  name = "Projects"
-  url = "/projects/"
-  weight = 2
-  [[menu.main]]
   name = "About"
   url = "/about/"
-  weight = 3
+  weight = 2
 
 [social]
   github = "https://github.com/RainerChiang"
-  rss = "/index.xml"
+  rss = "index.xml"
 
 [taxonomies]
 category = "categories"
 tag = "tags"
-series = "series"
 
 # doc: https://gohugo.io/getting-started/configuration-markup#highlight
 # syntax style: https://xyproto.github.io/splash/docs/longer/all.html
