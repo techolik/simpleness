@@ -10,7 +10,7 @@ simpleness is a concise theme for hugo which is forked from [contrast-hugo](http
 
 - Responsive
 - MathJax suport
-- Google Analytics supported
+- Google Analytics support
 - Comment systems include: disqus, valine
 
 ### TODO
