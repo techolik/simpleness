@@ -36,7 +36,7 @@ hugo new site myBlog
 
 ```shell
 cd myBlog
-git submodule add https://github.com/RainerChiang/simpleness.git
+git submodule add https://github.com/RainerChiang/simpleness.git themes/simpleness
 ```
 
 copy the content of exampleSite
