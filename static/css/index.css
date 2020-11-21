@@ -22,14 +22,23 @@
 
 @media (prefers-color-scheme: dark) {
   html {
-    background: #1c1d22;
-    color: #ffffff;
+    background: #2d2d2d;
+    color: #dddddd;
+  }
+
+  a:link, a:visited {
+    color: #81c4f8;
+    #color: #3ca4ff;
+  }
+
+  .header:link, .header:visited {
+    color: inherit;
   }
 }
 
 html {
   font-size: 16px;
-  font-size: calc(0.8rem + 0.3vw);
+  font-size: calc(0.85rem + 0.1vw);
 }
 
 body {
@@ -56,7 +65,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 article a {

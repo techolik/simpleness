@@ -5,18 +5,28 @@
 
   <nav >
     {{ range .Site.Menus.main }}
-    <a href="{{ .URL }}"> {{ .Name }}</a>
+    <a href="{{ .URL }}" class="header"> {{ .Name }}</a>
     {{ end }}
   </nav>
 
   <nav class="fontawesome">
-    {{ if .Site.Social.github }}
-    <a href="{{ .Site.Social.github }}" target="_blank">
-        <i title="GitHub" class="fab fa-github"></i>
+    {{ if .Site.Social.douban }}
+    <a href="{{ .Site.Social.douban }}" target="_blank" class="header">
+      <img src="{{ .Site.BaseURL }}images/douban.png" width="16" height="16" class="fab">
+    </a>
+    {{ end }}
+    {{ if .Site.Social.instagram }}
+    <a href="{{ .Site.Social.instagram }}" target="_blank" class="header">
+        <i title="Instagram" class="fab fa-instagram"></i>
+    </a>
+    {{ end }}
+    {{ if .Site.Social.twitter }}
+    <a href="{{ .Site.Social.twitter }}" target="_blank" class="header">
+        <i title="Twitter" class="fab fa-twitter"></i>
     </a>
     {{ end }}
     {{ if .Site.Social.rss }}
-    <a href="{{ "index.xml" | absLangURL }}" target="_blank">
+    <a href="{{ "index.xml" | absLangURL }}" target="_blank" class="header">
         <i title="RSS" class="fas fa-rss"></i>
     </a>
     {{ end }}

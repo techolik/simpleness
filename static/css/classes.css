@@ -1,5 +1,5 @@
 .archive li {
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .archive time {
@@ -52,4 +52,8 @@
 .foot a:hover {
   text-decoration: underline;
   color: #0000EE;
+}
+
+.centered {
+  text-align: center;
 }
