@@ -44,14 +44,26 @@
 
     {{ end }}
 
-    <div class="centered">
-      {{ if .Paginator.HasPrev }}
-        <a href="{{ .Paginator.Prev.URL }}">&#129092;</a>
-      {{ end }}
-      {{ if .Paginator.HasNext }}
-        <a href="{{ .Paginator.Next.URL }}">&#129094;</a>
-      {{ end }}
-    </div>
+    {{ if .IsHome }}
+      <div class="centered">
+        <!--
+        {{ if .Paginator.HasPrev }}
+          <a href="{{ .Paginator.Prev.URL }}">&#129092;</a>
+        {{ end }}
+        {{ if .Paginator.HasNext }}
+          <a href="{{ .Paginator.Next.URL }}">&#129094;</a>
+        {{ end }}-->
+        {{ $paginator := $.Paginator }}
+        {{ range $paginator.Pagers }}
+          {{ if eq . $paginator}}
+            <a href="{{ .URL }}" class="bold">{{ .PageNumber }}&#8196</a>
+          {{else}}
+            <a href="{{ .URL }}">{{ .PageNumber }}&#8196</a>
+          {{end}}
+        {{ end }}
+      </div>
+    {{end}}
+
   {{ end }}
   </div>
   

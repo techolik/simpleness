@@ -4,7 +4,7 @@
 
 .archive time {
   display: inline-block;
-  min-width: 10ch;
+  min-width: 5ch;
   margin: 0 .2em;
 }
 

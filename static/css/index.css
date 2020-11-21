@@ -15,7 +15,7 @@
 
 @media (prefers-color-scheme: light) {
   html {
-    background: #ffffff;
+    background: #fafafa;
     color: #1c1d22;
   }
 }
@@ -38,7 +38,7 @@
 
 html {
   font-size: 16px;
-  font-size: calc(0.85rem + 0.1vw);
+  font-size: calc(0.85rem + 0.15vw);
 }
 
 body {
@@ -191,4 +191,9 @@ body > header, body > article, body > footer {
   body > header, body > article, body > footer {
     padding: 1.75em calc(38% - 12em);
   }
+}
+
+a.bold{
+  font-weight: bold;
+  font-size: 1.2em;
 }
