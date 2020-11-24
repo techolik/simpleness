@@ -1,4 +1,8 @@
-{{ $related := (where site.RegularPages "Type" "in" site.Params.mainSections).Related . | first 5 }}
+{{ $allRelated := (where site.RegularPages "Type" "in" site.Params.mainSections).Related . | first 5 }}
+{{ $related := $allRelated}}
+{{ if not .Site.Params.showHidden }}
+  {{ $related = where $allRelated "Params.hidden" "!=" true }}
+{{ end }}
 {{ with $related }}
 <div class="releated-post">
   <h3>Related Posts</h3>
