@@ -44,9 +44,14 @@
 
   {{ .Content }}
 
+  {{ if or (.Site.Params.showHidden) (not .Params.hidden) }}
+    {{ partial "share.html" . }}
+  {{ end }}
+  <p></p>
+
   {{ if or (gt .Params.tags 0) .Lastmod }}
-  <footer>
-    <hr>
+  <!--<footer>
+    <hr>-->
     {{ if ne .Lastmod .Date }}
     <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
       update @ {{ .Lastmod.Format "January 02, 2006" }}
@@ -62,7 +67,7 @@
       {{ end }}
     {{ end }}
     </div>
-  </footer>
+  <!--</footer>-->
   {{ end }}
 
   {{ partial "related.html" . }}

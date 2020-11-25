@@ -10,6 +10,7 @@
   {{ $Pages = where $AllPages "Params.hidden" "!=" true }}
 {{ end }}
 
+{{ $IsHome := .IsHome }}
 <article>
   <header>
     <h1>
@@ -24,43 +25,48 @@
   <div>
   {{ if $Pages }}
     {{ range (.Paginate ($Pages.GroupByDate "2006") 20).PageGroups }}
+      {{ if $IsHome }}
       <h2>{{ .Key }}</h2>
+      {{ end }}
       {{ range .Pages.GroupByDate ""}}
 
+        {{ if $IsHome }}
         <ul class="archive">
-        <!-- .Pages in $Pages -->
+        {{ end }}
 
         {{ range .Pages }}
           <li>
-          {{ if .Date }}
-            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "01-02" }}</time>
+          {{ if $IsHome }}
+            {{ if .Date }}
+              <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "01-02" }}</time>
+            {{ end }}
           {{ end }}
           {{ if .Params.draft }}
             <a href="{{ .Permalink }}">**{{ .Title }}</a>
           {{ else }}
             <a href="{{ .Permalink }}">{{ .Title }}</a>
           {{ end}}
-            <!-- range .Params.categories 
-              >> <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" padding-left: auto;><strong>{{ . }}</strong></a>
-            end  -->
           </li>
         {{ end }}
+
+        {{ if $IsHome }}
         </ul>
+        {{ end }}
 
       {{ end }}
 
     {{ end }}
 
-    {{ if .IsHome }}
-      <div class="centered">
-        <!--
-        {{ if .Paginator.HasPrev }}
-          <a href="{{ .Paginator.Prev.URL }}">&#129092;</a>
-        {{ end }}
-        {{ if .Paginator.HasNext }}
-          <a href="{{ .Paginator.Next.URL }}">&#129094;</a>
-        {{ end }}-->
-        {{ $paginator := $.Paginator }}
+    <div class="centered">
+      <!--
+      {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}">&#129092;</a>
+      {{ end }}
+      {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}">&#129094;</a>
+      {{ end }}-->
+      {{ $paginator := $.Paginator }}
+      {{ if gt $paginator.TotalPages 1}}
         {{ range $paginator.Pagers }}
           {{ if eq . $paginator}}
             <a href="{{ .URL }}" class="bold">{{ .PageNumber }}&#8196</a>
@@ -68,8 +74,8 @@
             <a href="{{ .URL }}">{{ .PageNumber }}&#8196</a>
           {{end}}
         {{ end }}
-      </div>
-    {{end}}
+      {{ end }}
+    </div>
 
   {{ end }}
   </div>
